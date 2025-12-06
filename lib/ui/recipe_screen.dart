@@ -25,7 +25,7 @@ class _RecipeScreenState extends State<RecipeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Food Recipe"),
+        title: Text("Food Recipes", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 25),),
         backgroundColor: Colors.blue,
       ),
       body: ListView.builder(
@@ -34,8 +34,8 @@ class _RecipeScreenState extends State<RecipeScreen> {
             final recipe = _recipes[index];
             return ListTile(
               leading: Icon(Icons.restaurant_menu),
-              title: Text(recipe.title),
-              subtitle: Text(recipe.description),
+              title: Text(recipe.title , style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+              subtitle: Text(recipe.description, style: TextStyle(color: Colors.grey)),
             );
           }),
     );
